@@ -1,0 +1,332 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" 
+content="width=device-width, 
+initial-scale=1.0"> 
+<title>Maroua AI - Smart Billboard Solutions</title> 
+<link 
+href="https://fonts.googleapis.com/css2 ?family=Inter:wght@400;600;700&display= swap" rel="stylesheet"> 
+<style> 
+body { 
+font-family: 'Inter', sans-serif; 
+margin: 0; 
+padding: 0; 
+background-color: #f4f4f4; 
+color: #333; 
+} 
+.container { 
+max-width: 1200px; 
+margin: 0 auto; 
+padding: 20px; 
+} 
+header { 
+background-color: #fff; 
+padding: 15px 20px; 
+box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; 
+justify-content: space-between; 
+align-items: center; 
+} 
+header .logo { 
+font-size: 1.5em; 
+font-weight: 700;
+color: #333; 
+} 
+header .menu-icon { 
+font-size: 2em; 
+cursor: pointer; 
+} 
+.hero-section { 
+text-align: center; 
+padding: 50px 20px; 
+background-color: #fff; 
+margin-top: 20px; 
+border-radius: 10px; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.05); } 
+.hero-section h1 { 
+font-size: 2.5em; 
+color: #333; 
+margin-bottom: 20px; 
+} 
+.hero-section .button { 
+display: inline-block; 
+padding: 15px 30px; 
+border: 2px solid #333; 
+border-radius: 30px; 
+text-decoration: none; 
+color: #333; 
+font-weight: 600; 
+transition: background-color 0.3s, color 0.3s; 
+} 
+.hero-section .button:hover { 
+background-color: #333; 
+color: #fff; 
+} 
+.hero-section .billboard-mockup { 
+margin-top: 40px;
+width: 100%; 
+max-width: 800px; 
+height: auto; 
+border-radius: 10px; /* Added for 
+consistency with other elements */ } 
+.about-section { 
+background-color: #fff; 
+padding: 50px 20px; 
+margin-top: 20px; 
+border-radius: 10px; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.05); } 
+.about-section h2 { 
+font-size: 2em; 
+color: #333; 
+margin-bottom: 20px; 
+text-align: center; 
+} 
+.about-section p { 
+font-size: 1.1em; 
+line-height: 1.6; 
+color: #555; 
+text-align: center; 
+max-width: 800px; 
+margin: 0 auto; 
+} 
+.features-section { 
+padding: 50px 20px; 
+margin-top: 20px; 
+display: grid; 
+gap: 20px; 
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+}
+.feature-card { 
+background-color: #2c2c2c; /* Dark background as in image */ 
+color: #fff; 
+padding: 30px; 
+border-radius: 10px; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; 
+} 
+.feature-card .icon { 
+font-size: 3em; 
+margin-bottom: 15px; 
+display: inline-block; 
+background-color: #555; /* Placeholder for actual icon background */ 
+padding: 10px; 
+border-radius: 5px; 
+} 
+.feature-card h3 { 
+font-size: 1.5em; 
+margin-bottom: 10px; 
+} 
+.feature-card p { 
+font-size: 1em; 
+line-height: 1.5; 
+color: #ccc; 
+} 
+.testimonials-section { 
+padding: 50px 20px; 
+margin-top: 20px; 
+text-align: center; 
+} 
+.testimonial-card { 
+background-color: #fff; 
+padding: 30px; 
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.05); max-width: 600px; 
+margin: 0 auto 30px auto; /* Centered and space below */ 
+} 
+.testimonial-card p { 
+font-size: 1.1em; 
+line-height: 1.6; 
+margin-bottom: 15px; 
+color: #555; 
+} 
+.testimonial-card .author { 
+font-weight: 600; 
+color: #333; 
+} 
+.testimonial-navigation { 
+margin-top: 20px; 
+} 
+.testimonial-navigation .nav-button { background-color: #333; 
+color: #fff; 
+border: none; 
+border-radius: 50%; 
+width: 40px; 
+height: 40px; 
+font-size: 1.5em; 
+margin: 0 10px; 
+cursor: pointer; 
+transition: background-color 0.3s; 
+} 
+.testimonial-navigation .nav-button:hover { background-color: #555; 
+} 
+.contact-section { 
+background-color: #fff; 
+padding: 50px 20px;
+margin-top: 20px; 
+border-radius: 10px; 
+box-shadow: 0 4px 8px rgba(0,0,0,0.05); text-align: center; 
+} 
+.contact-section h2 { 
+font-size: 2em; 
+color: #333; 
+margin-bottom: 10px; 
+} 
+.contact-section p { 
+font-size: 1.1em; 
+color: #555; 
+margin-bottom: 30px; 
+} 
+.contact-form { 
+max-width: 500px; 
+margin: 0 auto; 
+text-align: left; 
+} 
+.contact-form label { 
+display: block; 
+margin-bottom: 8px; 
+font-weight: 600; 
+color: #333; 
+} 
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form textarea { 
+width: 100%; 
+padding: 15px; 
+margin-bottom: 20px; 
+border: 1px solid #ddd; 
+border-radius: 8px; 
+box-sizing: border-box; /* Ensures 
+padding doesn't affect width */ 
+font-size: 1em;
+} 
+.contact-form textarea { 
+resize: vertical; 
+min-height: 120px; 
+} 
+.contact-form button { 
+background-color: #333; 
+color: #fff; 
+padding: 15px 30px; 
+border: none; 
+border-radius: 30px; 
+font-size: 1.1em; 
+cursor: pointer; 
+transition: background-color 0.3s; 
+display: block; /* Make button full width of form */ 
+width: fit-content; /* Adjust to content width */ 
+margin: 0 auto; /* Center the button */ border: 2px solid #333; /* Border for the button */ 
+background-color: #fff; /* White 
+background for button */ 
+color: #333; /* Black text for button */ } 
+.contact-form button:hover { 
+background-color: #333; 
+color: #fff; 
+} 
+footer { 
+background-color: #2c2c2c; 
+color: #fff; 
+text-align: center; 
+padding: 20px; 
+margin-top: 40px; 
+}
+footer .logo { 
+font-size: 1.5em; 
+font-weight: 700; 
+} 
+/* Responsive adjustments */ 
+@media (max-width: 768px) { 
+.hero-section h1 { 
+font-size: 2em; 
+} 
+.about-section h2, .contact-section h2 { font-size: 1.8em; 
+} 
+.features-section { 
+grid-template-columns: 1fr; 
+} 
+} 
+</style> 
+</head> 
+<body> 
+<header> 
+<div class="container"> 
+<div class="logo">Maroua AI</div> 
+<div class="menu-icon">&#9776;</div> </div> 
+</header> 
+<main> 
+<section class="hero-section container"> <h1>Boost Visibility with Smart 
+Billboards</h1> 
+<a href="#contact" 
+class="button">Boost Your Reach</a> <img 
+src="https://via.placeholder.com/800x300?text =Outdoor+Billboard+Mockup" alt="Outdoor
+Billboard Mockup" class="billboard-mockup"> </section> 
+<section class="about-section container"> <h2>Biskra's AI Billboard Experts</h2> <p>Maroua AI is a cutting-edge billboard 
+management company located in the bustling city of Biskra. Our innovative platform leverages artificial intelligence to streamline outdoor advertising for businesses seeking impactful and dynamic marketing solutions. By blending technology with strategic insights, Maroua AI offers precise targeting capabilities and real-time analytics, ensuring optimal visibility and engagement for our clients. We are committed to transforming the way companies interact with their audiences through intelligent, data-driven advertising in the heart of Algeria.</p> 
+</section> 
+<section class="about-section container"> <h2>Optimize Billboard ROI in Biskra</ h2> 
+<p>At Maroua AI, we revolutionize 
+outdoor advertising in Biskra City by offering cutting-edge AI-powered billboard 
+management solutions tailored to meet the unique needs of our clients. Our advanced technology ensures optimal audience targeting, maximizing your advertising reach and ROI. By choosing us, you're not just selecting a service; you're embracing innovation, comprehensive analytics, and unparalleled expertise that drive impactful advertising campaigns. Trust us with your brand's outdoor presence and experience a
+seamless blend of precision and creativity.</p> <a href="#contact" class="button" 
+style="margin-top: 30px;">Strategic Advertise</ a> 
+</section> 
+<section class="features-section 
+container"> 
+<div class="feature-card"> 
+<div class="icon">&#128200;</div> 
+<h3>Smart Billboard Analytics</h3> <p>Harness AI to analyze billboard 
+performance, maximizing advertising impact efficiently.</p> 
+</div> 
+<div class="feature-card"> 
+<div class="icon">&#128197;</div> 
+<h3>Automated Ad Scheduling</h3> <p>Streamline ad placements with 
+AI-driven scheduling that optimizes views and engagement.</p> 
+</div> 
+<div class="feature-card"> 
+<div class="icon">&#128100;</div> 
+<h3>Real-Time Audience Insights</h3> <p>Gain instant insights into audience demographics and behavior patterns for targeted advertising.</p> 
+</div> 
+<div class="feature-card"> 
+<div class="icon">&#9881;</div> 
+<h3>Dynamic Content Management</h3> <p>Easily update billboard content 
+based on real-time data and audience trends for maximum relevance.</p> 
+</div>
+</section> 
+<section class="testimonials-section container"> 
+<div class="testimonial-card"> 
+<p>Maroua AI revolutionized our ad campaigns! The precise targeting and real-time analytics have boosted our visibility beyond expectations. A must-have tool for any business focused on impactful billboard advertising.</p> 
+<div class="author">- Daniel Foster</ div> 
+</div> 
+<div class="testimonial-card"> 
+<p>Maroua AI transformed our 
+advertising strategy. Its intuitive interface and advanced targeting features have significantly increased our ad engagement. Highly recommend to anyone looking to elevate their billboard marketing efforts!</p> 
+<div class="author">- Samantha 
+Lewis</div> 
+</div> 
+<div class="testimonial-navigation"> <button class="nav-button">&larr;</ 
+button> 
+<button class="nav-button">&rarr;</ button> 
+</div> 
+</section> 
+<section id="contact" 
+class="contact-section container"> 
+<h2>Contact Maroua AI Today</h2> <p>Reach us in Biskra City for AI 
+billboard management inquiries.</p>
+<form class="contact-form"> 
+<label for="name">Name</label> <input type="text" id="name" 
+name="name" required> 
+<label for="email">Email</label> <input type="email" id="email" 
+name="email" required> 
+<label for="message">Message</ label> 
+<textarea id="message" 
+name="message" required></textarea> 
+<button type="submit">Send 
+Message</button> 
+</form> 
+</section> 
+</main> 
+<footer> 
+<div class="container"> 
+<div class="logo">Maroua AI</div> </div> 
+</footer> 
+</body> 
+</html>
